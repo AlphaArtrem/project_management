@@ -1,0 +1,79 @@
+name: task_manager
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+
+dependencies:
+  cupertino_icons: 1.0.2
+  flutter:
+    sdk: flutter
+
+  #API calls
+  http: 1.2.1
+
+  #Logs
+  logger: ^2.2.0
+
+  #Navigation
+  go_router: 14.0.2
+
+  #Dependency Injection
+  get_it: 7.7.0
+
+  #Emulate UI on different devices
+  device_preview: 1.1.0
+
+  #Dynamic sizing
+  flutter_screenutil: 5.9.0
+
+  #Render SVG Assets
+  flutter_svg: 2.0.10+1
+
+  #State Management
+  flutter_bloc: 8.1.5
+  equatable: 2.0.5
+
+  #Storage
+  hive_flutter: 1.1.0
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: 5.1.0
+  hive_generator: 2.0.1
+  build_runner: ^2.4.9
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/img/
+
+  fonts:
+    - family: Pretendard
+      fonts:
+        - asset: assets/fonts/Pretendard/Pretendard-Thin.otf
+          weight: 100
+        - asset: assets/fonts/Pretendard/Pretendard-ExtraLight.otf
+          weight: 200
+        - asset: assets/fonts/Pretendard/Pretendard-Light.otf
+          weight: 300
+        - asset: assets/fonts/Pretendard/Pretendard-Regular.otf
+          weight: 400
+        - asset: assets/fonts/Pretendard/Pretendard-Medium.otf
+          weight: 500
+        - asset: assets/fonts/Pretendard/Pretendard-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/Pretendard/Pretendard-Bold.otf
+          weight: 700
+        - asset: assets/fonts/Pretendard/Pretendard-ExtraBold.otf
+          weight: 800
+        - asset: assets/fonts/Pretendard/Pretendard-Black.otf
+          weight: 900

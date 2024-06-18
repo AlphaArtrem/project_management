@@ -1,0 +1,5 @@
+{
+  "baseUrl": "https://api.todoist.com/rest/v2",
+  "appName" : "Task Manager",
+  "todoistBearerToken" : "2432c19bf3cccf472c186f3a8f6b37eb8e496af8"
+}
