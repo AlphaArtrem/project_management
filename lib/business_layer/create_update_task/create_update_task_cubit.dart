@@ -36,9 +36,10 @@ class CreateUpdateTaskCubit extends Cubit<CreateUpdateTaskState> {
       return;
     }
     assert(
-        (projectModel == null && taskModel != null) ||
-            (projectModel != null && taskModel == null),
-        'Both project and task cannot be null and one of them must be null');
+      (projectModel == null && taskModel != null) ||
+          (projectModel != null && taskModel == null),
+      'Both project and task cannot be null and one of them must be null',
+    );
     if (projectModel != null) {
       emit(CreateTaskState(projectID: projectModel.id));
     } else {
@@ -162,10 +163,11 @@ class CreateUpdateTaskCubit extends Cubit<CreateUpdateTaskState> {
         if (result) {
           final task = state.taskModel.copyWith(isCompleted: true);
           final historyModel = TaskHistoryModel(
-              taskModel: task,
-              taskTimeTacking: state.taskTimeTacking,
-              comments: comment,
-              completionTimeStamp: DateTime.now().toIso8601String());
+            taskModel: task,
+            taskTimeTacking: state.taskTimeTacking,
+            comments: comment,
+            completionTimeStamp: DateTime.now().toIso8601String(),
+          );
           taskHistoryRepository.addTaskToHistory(historyModel);
           emit(state.copyWith(isLoading: false, error: '', taskModel: task));
           return task;

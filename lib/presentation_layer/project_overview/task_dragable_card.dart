@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:task_manager/business_layer/project_overview/project_overview_bloc.dart';
 import 'package:task_manager/data_layer/models/task/task_model.dart';
+import 'package:task_manager/presentation_layer/project_overview/project_overview_screen.dart';
 import 'package:task_manager/presentation_layer/project_overview/task_card.dart';
 
-class TaskDragableCard extends StatelessWidget {
-  const TaskDragableCard({
+///Draggable card to show task and move around in tasks status column's
+class TaskDraggableCard extends StatelessWidget {
+  ///Constructor for [TaskDraggableCard]
+  const TaskDraggableCard({
     required this.task,
     required this.horizontalScrollController,
     required this.index,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
+  ///Task to show
   final TaskModel task;
+
+  ///Index of card in [ProjectOverviewBloc]
   final int index;
+
+  ///[ScrollController] for horizontal scroll for task status column's in
+  ///[ProjectOverviewScreen]
   final ScrollController horizontalScrollController;
 
   @override

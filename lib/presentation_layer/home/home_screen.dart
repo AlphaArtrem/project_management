@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_manager/business_layer/home_screen/home_screen_bloc.dart';
@@ -151,7 +150,7 @@ class HomeScreen extends StatelessWidget {
                   style: themeService.state.primaryTextStyle.copyWith(
                     fontSize: 20.sp,
                   ),
-                )
+                ),
               ],
             ),
           );

@@ -1,3 +1,6 @@
+// ignore_for_file: public_member_api_docs
+
+///API path for base url
 class APIConstants {
   static const String projects = '/projects';
   static const String tasks = '/tasks';

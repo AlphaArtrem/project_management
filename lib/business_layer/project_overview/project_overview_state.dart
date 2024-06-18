@@ -13,6 +13,7 @@ abstract class ProjectOverviewState extends Equatable {
   ///Error if any in loading or adding projects
   final String error;
 
+  ///Copy with constructor for [ProjectOverviewState]
   ProjectOverviewState copyWith({
     bool? isLoading,
     String? error,
@@ -29,6 +30,7 @@ abstract class ProjectOverviewState extends Equatable {
 
 ///Initial state for [ProjectOverviewBloc]
 class InitialProjectOverviewState extends ProjectOverviewState {
+  ///Default constructor for [InitialProjectOverviewState]
   const InitialProjectOverviewState({
     super.isLoading,
     super.error,
@@ -49,6 +51,7 @@ class InitialProjectOverviewState extends ProjectOverviewState {
 
 ///Loaded state for [ProjectOverviewBloc]
 class LoadedProjectOverviewState extends ProjectOverviewState {
+  ///Default constructor for [LoadedProjectOverviewState]
   const LoadedProjectOverviewState({
     required this.tasks,
     required this.projectID,
@@ -56,6 +59,7 @@ class LoadedProjectOverviewState extends ProjectOverviewState {
     super.error,
   });
 
+  ///Project id for task
   final String projectID;
 
   ///List of tasks for projects

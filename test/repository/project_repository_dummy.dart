@@ -40,7 +40,8 @@ class ProjectRepositoryDummy extends IProjectRepository {
   @override
   Future<bool> closeTask(TaskModel task) async {
     (json['tasks'] as List).removeWhere(
-        (taskJson) => (taskJson as Map<String, dynamic>)['id'] == task.id);
+      (taskJson) => (taskJson as Map<String, dynamic>)['id'] == task.id,
+    );
     return true;
   }
 
@@ -90,6 +91,7 @@ class ProjectRepositoryDummy extends IProjectRepository {
           task.updateTaskJson()[key];
     }
     return TaskModel.fromJson(
-        (json['tasks'] as List)[index] as Map<String, dynamic>);
+      (json['tasks'] as List)[index] as Map<String, dynamic>,
+    );
   }
 }

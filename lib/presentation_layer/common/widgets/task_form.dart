@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_manager/data_layer/enums/task_status.dart';
@@ -139,7 +138,9 @@ class TaskForm extends StatelessWidget {
               ),
               items: TaskStatus.values.map((TaskStatus status) {
                 return DropdownMenuItem(
-                    value: status, child: _statusText(status));
+                  value: status,
+                  child: _statusText(status),
+                );
               }).toList(),
               underline: const SizedBox.shrink(),
               onChanged: onStatusChanged,

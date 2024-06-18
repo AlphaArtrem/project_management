@@ -2,9 +2,12 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:task_manager/data_layer/models/time_tracking/task_time_tracking.dart';
 import 'package:task_manager/repositories/time_tracking/time_tracking_repository_interface.dart';
 
+///Repository to track time spent on a task
 class TimeTrackingRepository implements ITimeTrackingRepository {
+  ///Constructor for [TimeTrackingRepository]
   TimeTrackingRepository(this.timeTrackingBox);
 
+  ///Hive [Box] to store and fetch time tracked for a task
   final Box<TaskTimeTacking> timeTrackingBox;
 
   @override
@@ -35,7 +38,8 @@ class TimeTrackingRepository implements ITimeTrackingRepository {
     final existingInfo = getTimeSpentOnTask(taskID);
     final totalTimeTracked = DateTime.now().difference(
       DateTime.fromMillisecondsSinceEpoch(
-          existingInfo.millisecondSinceEpochSinceLastTimeTrackingStarted!),
+        existingInfo.millisecondSinceEpochSinceLastTimeTrackingStarted!,
+      ),
     );
     timeTrackingBox.put(
       taskID,

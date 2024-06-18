@@ -3,7 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_manager/data_layer/models/task/task_model.dart';
 import 'package:task_manager/service_layer/services_setup.dart';
 
+///Card to show task info
 class TaskCard extends StatelessWidget {
+  ///Constructor for [TaskCard]
   const TaskCard({
     required this.task,
     this.isDragging = false,
@@ -11,8 +13,13 @@ class TaskCard extends StatelessWidget {
     super.key,
   });
 
+  ///If the card is dragging show border around card
   final bool isDragging;
+
+  ///Task to show in card
   final TaskModel task;
+
+  ///Width of card
   final double width;
 
   @override

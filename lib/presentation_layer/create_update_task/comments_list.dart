@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_manager/business_layer/comments/comments_cubit.dart';
@@ -11,7 +9,7 @@ import 'package:task_manager/service_layer/services_setup.dart';
 ///Screen to create or update  tasks
 class CommentsList extends StatelessWidget {
   ///Default constructor for [CommentsList]
-  CommentsList({
+  const CommentsList({
     this.taskModel,
     this.cubit,
     this.comments,

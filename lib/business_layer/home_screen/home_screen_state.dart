@@ -13,6 +13,7 @@ abstract class HomeScreenState extends Equatable {
   ///Error if any in loading or adding projects
   final String error;
 
+  ///Copy with constructor for [HomeScreenState]
   HomeScreenState copyWith({
     bool? isLoading,
     String? error,

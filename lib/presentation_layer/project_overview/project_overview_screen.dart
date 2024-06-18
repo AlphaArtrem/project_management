@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_manager/business_layer/project_overview/project_overview_bloc.dart';
 import 'package:task_manager/data_layer/models/project/project_model.dart';
 import 'package:task_manager/data_layer/models/route/route_details.dart';
-import 'package:task_manager/data_layer/models/task/task_model.dart';
 import 'package:task_manager/presentation_layer/common/views/base_view.dart';
 import 'package:task_manager/presentation_layer/create_update_task/create_update_task_screen.dart';
 import 'package:task_manager/presentation_layer/project_overview/tasks_list.dart';

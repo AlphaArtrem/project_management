@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_manager/data_layer/models/route/route_details.dart';
 import 'package:task_manager/data_layer/models/task_history_model/task_history_model.dart';

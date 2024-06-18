@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:task_manager/business_layer/create_update_task/create_update_task_cubit.dart';
 import 'package:task_manager/data_layer/models/project/project_model.dart';
 import 'package:task_manager/data_layer/models/task/task_model.dart';
@@ -6,12 +8,15 @@ import 'package:task_manager/repositories/project/project_repository_interface.d
 import 'package:task_manager/service_layer/api_service/api_service.dart';
 import 'package:task_manager/service_layer/services_setup.dart';
 
+///Repository to add and fetch projects
 class ProjectRepository implements IProjectRepository {
+  ///Constructor for [ProjectRepository]
   ProjectRepository(this.apiService);
 
   @override
   final ApiService apiService;
 
+  ///Auth header for API calls
   Map<String, String> get authHeaders => apiService.authHeadersForTodoist;
 
   @override

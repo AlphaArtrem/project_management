@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_manager/business_layer/project_overview/project_overview_bloc.dart';
@@ -8,12 +7,14 @@ import 'package:task_manager/presentation_layer/create_update_task/create_update
 import 'package:task_manager/presentation_layer/project_overview/task_dragable_card.dart';
 import 'package:task_manager/service_layer/services_setup.dart';
 
+///List of tasks with movable cards in separate tasks status columns
 class TasksList extends StatefulWidget {
+  ///Constructor for [TasksList]
   const TasksList({
     required this.horizontalScrollController,
     required this.bloc,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   ///[ScrollController] for tasks list sections
   final ScrollController horizontalScrollController;
@@ -85,7 +86,7 @@ class _TasksListState extends State<TasksList> {
                     CreateUpdateTaskScreen.route,
                     extra: currentStatusTasks.elementAt(index),
                   ),
-                  child: TaskDragableCard(
+                  child: TaskDraggableCard(
                     task: currentStatusTasks.elementAt(index),
                     horizontalScrollController:
                         widget.horizontalScrollController,

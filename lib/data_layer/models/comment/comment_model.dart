@@ -16,13 +16,14 @@ class CommentModel extends Equatable {
   ///Get [CommentModel] from API JSON
   factory CommentModel.fromJson(Map<String, dynamic> json) {
     return CommentModel(
-        content:
-            json['content'] is String? ? json['content'] as String? ?? '' : '',
-        postedAt: DateTime.tryParse(json['posted_at'] is String?
-            ? json['posted_at'] as String? ?? ''
-            : ''),
-        taskId:
-            json['task_id'] is String? ? json['task_id'] as String? ?? '' : '');
+      content:
+          json['content'] is String? ? json['content'] as String? ?? '' : '',
+      postedAt: DateTime.tryParse(
+        json['posted_at'] is String? ? json['posted_at'] as String? ?? '' : '',
+      ),
+      taskId:
+          json['task_id'] is String? ? json['task_id'] as String? ?? '' : '',
+    );
   }
 
   ///Comment content

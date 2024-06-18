@@ -2,7 +2,9 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:task_manager/data_layer/models/task_history_model/task_history_model.dart';
 import 'package:task_manager/repositories/history_repository/task_history_repository_interface.dart';
 
+///Repository to store and fetch task history
 class TaskHistoryRepository implements ITaskHistoryRepository {
+  ///Constructor for [TaskHistoryRepository]
   TaskHistoryRepository({
     required this.taskHistoryBox,
     required this.historyTaskIdToIndexBox,

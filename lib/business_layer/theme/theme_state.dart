@@ -58,16 +58,22 @@ class ThemeState extends Equatable {
   ///Secondary text color
   late final Color secondaryTextColor;
 
+  ///Error text color
   late final Color errorColor;
 
+  ///Style for app bar text
   late final TextStyle appBarTitleStyle;
 
+  ///Style for error text
   late final TextStyle errorTextStyle;
 
+  ///Style for primary text
   late final TextStyle primaryTextStyle;
 
+  ///Style for secondary text
   late final TextStyle secondaryTextStyle;
 
+  ///Style for title text
   late final TextStyle primaryTitleStyle;
 
   @override

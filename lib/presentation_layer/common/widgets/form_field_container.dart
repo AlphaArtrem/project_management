@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_manager/service_layer/services_setup.dart';
 
+///Container for app's form fields
 class FormFieldContainer extends StatelessWidget {
+  ///Constructor for [FormFieldContainer]
   const FormFieldContainer({required this.child, super.key});
 
+  ///Child for container
   final Widget child;
 
   @override

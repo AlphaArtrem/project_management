@@ -3,12 +3,15 @@ import 'package:task_manager/data_layer/static/api_constants.dart';
 import 'package:task_manager/repositories/comments/comments_interface.dart';
 import 'package:task_manager/service_layer/api_service/api_service.dart';
 
+///Repository to add and fetch comments
 class CommentsRepository implements ICommentsRepository {
+  ///Constructor fo [CommentsRepository]
   CommentsRepository(this.apiService);
 
   @override
   final ApiService apiService;
 
+  ///Auth header for API calls
   Map<String, String> get authHeaders => apiService.authHeadersForTodoist;
 
   @override

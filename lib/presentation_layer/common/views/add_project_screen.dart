@@ -143,7 +143,7 @@ class AddProjectScreen extends StatelessWidget {
                   style: themeService.state.primaryTextStyle.copyWith(
                     fontSize: 20.sp,
                   ),
-                )
+                ),
               ],
             ),
           );
