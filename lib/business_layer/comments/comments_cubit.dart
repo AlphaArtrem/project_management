@@ -14,6 +14,7 @@ class CommentsCubit extends Cubit<CommentsState> {
   ///Implementation of [IProjectRepository] to create tasks
   final ICommentsRepository commentsRepository;
 
+  ///Initialise comments cubit and load comment for current task
   Future<void> init(String taskID) async {
     if (state is! InitialCommentsState) {
       return;
@@ -32,6 +33,7 @@ class CommentsCubit extends Cubit<CommentsState> {
     }
   }
 
+  ///Add comment to current task
   Future<CommentModel?> addComment(String content) async {
     if (state is LoadedCommentsState) {
       final state = this.state as LoadedCommentsState;
