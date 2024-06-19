@@ -2,6 +2,7 @@ part of 'home_screen_bloc.dart';
 
 ///Abstract state for [HomeScreenBloc]
 abstract class HomeScreenState extends Equatable {
+  ///Constructor for [HomeScreenState]
   const HomeScreenState({
     this.isLoading = true,
     this.error = '',
@@ -30,6 +31,7 @@ abstract class HomeScreenState extends Equatable {
 
 ///Initial state for [HomeScreenBloc]
 class InitialHomeScreenState extends HomeScreenState {
+  ///Constructor for [InitialHomeScreenState]
   const InitialHomeScreenState({
     super.isLoading,
     super.error,
@@ -50,6 +52,7 @@ class InitialHomeScreenState extends HomeScreenState {
 
 ///Loaded state for [HomeScreenBloc]
 class LoadedHomeScreenState extends HomeScreenState {
+  ///Constructor for [LoadedHomeScreenState]
   const LoadedHomeScreenState({
     required this.projects,
     super.isLoading = false,
