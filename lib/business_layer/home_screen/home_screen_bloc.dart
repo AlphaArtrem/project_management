@@ -11,8 +11,8 @@ part 'home_screen_state.dart';
 class HomeScreenBloc extends Bloc<HomeScreenEvents, HomeScreenState> {
   ///[HomeScreenBloc] default constructor which takes in [HomeScreenState]
   ///as a required parameter
-  HomeScreenBloc(this.projectRepository)
-      : super(const InitialHomeScreenState()) {
+  HomeScreenBloc(this.projectRepository, {HomeScreenState? initialState})
+      : super(initialState ?? const InitialHomeScreenState()) {
     on<LoadHomeScreenEvent>(_init);
     on<AddProjectEvent>(_addProject);
   }

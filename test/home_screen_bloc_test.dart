@@ -59,13 +59,23 @@ void main() async {
     );
 
     blocTest<HomeScreenBloc, HomeScreenState>(
-      'On LoadHomeScreenEvent Projects should be fetched from '
-      'the IProjectRepository implementation',
-      build: () => homeScreenBloc,
-      act: (bloc) => bloc.add(const LoadHomeScreenEvent()),
+      'On AddProjectEvent Projects should be added to HomeScreenState '
+      'as well as to IProjectRepository implementation storage',
+      build: () => HomeScreenBloc(
+        projectRepositoryDummy,
+        initialState: LoadedHomeScreenState(projects: projects),
+      ),
+      act: (bloc) async => bloc.add(
+        AddProjectEvent(
+          await projectRepositoryDummy.addProject('New Project'),
+        ),
+      ),
       expect: () async => [
         LoadedHomeScreenState(
-          projects: projects,
+          projects: [
+            (await projectRepositoryDummy.getProjects()).last,
+            ...projects,
+          ],
         ),
       ],
     );
